@@ -5,8 +5,8 @@
 
 [![Live Website](https://img.shields.io/badge/Live%20Website-tricks.lexis.blog-6366f1?style=flat&logo=googlechrome&logoColor=white)](https://tricks.lexis.blog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Vanilla JS](https://img.shields.io/badge/Tech-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-brightgreen.svg)]()
-[![Status: Complete](https://img.shields.io/badge/Tricks-100%2F100-success.svg)]()
+![Vanilla JS](https://img.shields.io/badge/Tech-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-brightgreen.svg)
+![Status: Complete](https://img.shields.io/badge/Tricks-100%2F100-success.svg)
 
 ---
 
@@ -59,15 +59,14 @@
 
 ---
 
----
-
 ## 🌐 Публікація та запуск на домені tricks.lexis.blog
 
 Проєкт налаштовано для автоматичного безперервного розгортання (**CI/CD**) через **GitHub Actions** на кастомний домен:
 
 🔗 **[https://tricks.lexis.blog](https://tricks.lexis.blog)**
 
-### Як влаштовано деплой:
+### Як влаштовано деплой
+
 1. **GitHub Actions Workflow:** файл [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) автоматично публікує проєкт на GitHub Pages при кожному оновленні гілки `main`.
 2. **Файл CNAME:** у корені репозиторію файл [`CNAME`](./CNAME) задає доменне ім'я `tricks.lexis.blog`.
 3. **Налаштування DNS у вашого провайдера домену (`lexis.blog`):**
