@@ -159,11 +159,11 @@
       const defenseText = elements.modalDefense.textContent;
       navigator.clipboard.writeText(defenseText).then(() => {
         const originalText = elements.modalCopyBtn.textContent;
-        elements.modalCopyBtn.textContent = '✓ Скопійовано!';
-        elements.modalCopyBtn.style.background = '#10b981';
+        elements.modalCopyBtn.textContent = '✓ СКОПІЙОВАНО';
+        elements.modalCopyBtn.style.borderColor = 'var(--color-ghost-white)';
         setTimeout(() => {
           elements.modalCopyBtn.textContent = originalText;
-          elements.modalCopyBtn.style.background = '';
+          elements.modalCopyBtn.style.borderColor = '';
         }, 1800);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
@@ -254,18 +254,14 @@
     const filtered = getFilteredTricks();
 
     // Update Counter
-    elements.resultsCount.textContent = `Показано ${filtered.length} із ${state.tricks.length}`;
+    elements.resultsCount.textContent = `ПОКАЗАНО ${filtered.length} ІЗ ${state.tricks.length}`;
 
     if (filtered.length === 0) {
       elements.grid.innerHTML = `
         <div class="empty-state">
-          <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="8" y1="12" x2="16" y2="12"></line>
-          </svg>
-          <h3 class="empty-title">Нічого не знайдено</h3>
+          <h3 class="empty-title">НІЧОГО НЕ ЗНАЙДЕНО</h3>
           <p class="empty-text">Спробуйте змінити пошуковий запит або скинути фільтри категорій.</p>
-          <button class="btn btn-secondary" onclick="window.resetFilters()">Скинути всі фільтри</button>
+          <button class="btn btn-ghost" onclick="window.resetFilters()">СКИНУТИ ВСІ ФІЛЬТРИ</button>
         </div>
       `;
       return;
@@ -307,8 +303,7 @@
               ${(trick.tags || []).slice(0, 3).map(tag => `<span class="tag-badge">#${escapeHtml(tag)}</span>`).join('')}
             </div>
             <button class="btn-card-detail" onclick="window.openDetail(${trick.id})">
-              <span>Захист</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              <span>ЗАХИСТ</span> →
             </button>
           </div>
         </article>
@@ -369,8 +364,8 @@
 
   function updateModalFavButton(id) {
     const isFav = state.favorites.has(id);
-    elements.modalFavToggle.textContent = isFav ? '★ Видалити з вибраного' : '☆ Додати до вибраного';
-    elements.modalFavToggle.style.color = isFav ? '#fbbf24' : '';
+    elements.modalFavToggle.textContent = isFav ? '★ ВИДАЛИТИ З ВИБРАНОГО' : '☆ ДОДАТИ ДО ВИБРАНОГО';
+    elements.modalFavToggle.style.borderColor = isFav ? 'var(--color-ghost-white)' : 'var(--color-ash)';
   }
 
   function closeDetailModal() {
