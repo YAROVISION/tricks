@@ -53,7 +53,10 @@
     trainerDescription: document.getElementById('trainer-description'),
     trainerDefense: document.getElementById('trainer-defense'),
     trainerRevealBtn: document.getElementById('trainer-reveal-btn'),
-    trainerNextBtn: document.getElementById('trainer-next-btn')
+    trainerNextBtn: document.getElementById('trainer-next-btn'),
+
+    // Back to top button
+    btnBackToTop: document.getElementById('btn-back-to-top')
   };
 
   // --- Initialize Application ---
@@ -183,6 +186,21 @@
     elements.trainerNextBtn.addEventListener('click', () => {
       pickRandomTrainerTrick();
     });
+
+    // Back to top scroll listener & click
+    if (elements.btnBackToTop) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 350) {
+          elements.btnBackToTop.classList.add('visible');
+        } else {
+          elements.btnBackToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      elements.btnBackToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     // Global keyboard shortcuts (ESC to close modals)
     document.addEventListener('keydown', (e) => {
