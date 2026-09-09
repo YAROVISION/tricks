@@ -1,0 +1,6 @@
+# Base files (forbidden from uploading to repository)
+base/
+
+# OS metadata
+.DS_Store
+Thumbs.db
