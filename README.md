@@ -3,6 +3,7 @@
 > **Інтерактивна енциклопедія та практичний гід із розпізнавання прихованих пасток, мови тіла та словесного пресингу у спілкуванні й переговорах.**  
 > Створено на основі матеріалів та досліджень книги **Петра Федоровича Ліонова «100 самых популярных трюков в общении»**.
 
+[![Live Website](https://img.shields.io/badge/Live%20Website-tricks.lexis.blog-6366f1?style=flat&logo=googlechrome&logoColor=white)](https://tricks.lexis.blog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Vanilla JS](https://img.shields.io/badge/Tech-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-brightgreen.svg)]()
 [![Status: Complete](https://img.shields.io/badge/Tricks-100%2F100-success.svg)]()
@@ -55,6 +56,29 @@
 ├── .gitignore       # Ігнорування системних файлів та вихідної папки base/
 └── README.md        # Документація проєкту
 ```
+
+---
+
+---
+
+## 🌐 Публікація та запуск на домені tricks.lexis.blog
+
+Проєкт налаштовано для автоматичного безперервного розгортання (**CI/CD**) через **GitHub Actions** на кастомний домен:
+
+🔗 **[https://tricks.lexis.blog](https://tricks.lexis.blog)**
+
+### Як влаштовано деплой:
+1. **GitHub Actions Workflow:** файл [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) автоматично публікує проєкт на GitHub Pages при кожному оновленні гілки `main`.
+2. **Файл CNAME:** у корені репозиторію файл [`CNAME`](./CNAME) задає доменне ім'я `tricks.lexis.blog`.
+3. **Налаштування DNS у вашого провайдера домену (`lexis.blog`):**
+   - **Тип запису:** `CNAME`
+   - **Хост / Піддомен (Host / Name):** `tricks`
+   - **Значення (Value / Target):** `yarovision.github.io.`
+   - **TTL:** `300` або `Auto`
+4. **У налаштуваннях репозиторію GitHub:**
+   - Перейдіть у **Settings** -> **Pages**;
+   - У розділі **Build and deployment** -> **Source** оберіть: **GitHub Actions**;
+   - Переконайтеся, що стоїть галочка **Enforce HTTPS**.
 
 ---
 
