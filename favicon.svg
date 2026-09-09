@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Obsidian Canvas -->
+  <rect width="64" height="64" rx="8" fill="#000000"/>
+  <rect x="1" y="1" width="62" height="62" rx="7" fill="none" stroke="#5a5a5a" stroke-width="1.5"/>
+
+  <!-- Faint Concentric Arc Linework (Minimal Collective) -->
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#5a5a5a" stroke-width="1" stroke-dasharray="2 3" stroke-opacity="0.6"/>
+
+  <!-- Ghost White Geometric Shield of Psychological Self-Defense -->
+  <path d="M32 14 L46 21 V33 C46 41.5 32 49 32 49 C32 49 18 41.5 18 33 V21 Z" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="2.5" 
+        stroke-linejoin="round" 
+        stroke-linecap="round"/>
+
+  <!-- Central Awareness Core -->
+  <circle cx="32" cy="31" r="3.5" fill="#ffffff"/>
+</svg>
