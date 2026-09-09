@@ -191,6 +191,58 @@ body {
   gap: var(--spacing-9);
 }
 
+.brand-short,
+.btn-text-short {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 10px 0;
+  }
+  .brand-badge {
+    display: none;
+  }
+  .brand-title {
+    font-size: 14px;
+    letter-spacing: -0.3px;
+  }
+  .header-actions {
+    gap: 6px;
+  }
+  .header-actions .btn {
+    padding: 5px 8px;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header .header-inner {
+    padding: 0 4px;
+  }
+  .brand-full,
+  .btn-text-full {
+    display: none !important;
+  }
+  .brand-short,
+  .btn-text-short {
+    display: inline !important;
+  }
+  .brand-title {
+    font-size: 13px;
+    letter-spacing: -0.2px;
+  }
+  .header-actions {
+    gap: 5px;
+  }
+  .header-actions .btn {
+    padding: 4px 7px;
+    font-size: 10.5px;
+    letter-spacing: 0.2px;
+  }
+}
+
 /* ==========================================================================
    Buttons (Ghost/Outlined only — Never filled per DESIGN.md)
    ========================================================================== */
